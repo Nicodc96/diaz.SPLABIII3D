@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Administración - 2PLABIII</title>
+</head>
+<body>
+    <body>
+        <header class="header-principal d-flex flex-column align-items-center">
+            <img src="../assets/header.png" class="img-fluid" alt="imgLogo" id="img-logo" style="height: 185px; width: 275px;">
+            <nav class="navbar navbar-expand-lg bg-transparent">
+                <div class="container-fluid" id="container-nav">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav flex-wrap">
+                      <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./anuncios.html">Anuncios</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+        </header>
+        <main class="pt-4 pb-5">
+          <section class="container-fluid pb-4" id="form-container">
+            <h2 class="text-center pt-1">Administración</h2>
+            <div id="form-header-img">
+              <img src="../assets/encabezado.jpg" alt="encabezado" class="img-fluid" id="imgEncabezado" width="100%">
+            </div>
+            <p id="titulo-form" class="fw-semibold pt-3">Complete el formulario según corresponda:</p>
+            <form class="row g-3 pt-4">
+              <div class="col-md-6">
+                <label for="txtTitulo" class="form-label">Titulo</label>
+                <input type="text" class="form-control" id="txtTitulo" required placeholder="Ingrese un titulo...">
+              </div>
+              <div class="col-md-6">
+                <label for="txtDescripcion" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="txtDescripcion" required placeholder="Ingrese una descripcion...">
+              </div>
+              <div class="col-12 pb-3" id="columna-rdo">
+                <label class="fs-6" for="columna-rdo">Tipo de mascota:</label>
+                <div class="d-flex justify-content-center gap-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rdoMascota" id="rdoGato" value="gato" checked>
+                      <label class="form-check-label" for="rdoGato">Gato</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="rdoMascota" id="rdoPerro" value="perro">
+                      <label class="form-check-label" for="rdoPerro">Perro</label>
+                    </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="txtPrecio" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="txtPrecio" placeholder="Min: $0 - Max: $50000" min="0" max="50000" required>
+              </div>
+              <div class="col-md-4 d-flex gap-1">
+                <img src="../assets/raza.png" alt="raza" width="32px" height="32px">
+                <input type="text" class="form-control align-self-center mb-4" id="txtRaza" placeholder="Raza" required>
+              </div>
+              <div class="col-md-4 d-flex gap-1">
+                <img src="../assets/nacimiento.png" alt="fecha_nacimiento" width="32px" height="32px">
+                <input type="text" class="form-control align-self-center mb-4" id="txtFechaNacimiento" placeholder="dd/mm/aaaa" required class="inputFechaNacimiento">
+              </div>
+              <div class="col-md-4 d-flex gap-1">
+                <img src="../assets/vacuna.png" alt="vacunas" width="32px" height="32px">
+                <select class="form-select align-self-center mb-4" name="selectVacuna" id="selectVacuna">
+                  <option value="0" selected>Elegir una:</option>
+                  <option value="1">Si</option>
+                  <option value="2">No</option>
+                </select>
+              </div>
+              <div class="col-12 d-flex justify-content-center flex-wrap gap-5">
+                <input type="hidden" name="txtId">
+                <button type="submit" class="btn btn-success d-flex align-items-center gap-1" id="btnGuardar">
+                  <img src="../assets/guardar.png" width="20px" height="20px"><p class="mt-0 mb-0">Guardar</p>
+                </button>
+                <button type="button" class="btn btn-danger d-flex align-items-center gap-1" id="btnEliminar">
+                  <img src="../assets/delete.png" width="20px" height="20px"><p class="mt-0 mb-0">Eliminar</p>
+                </button>
+                <button type="button" class="btn btn-warning d-flex align-items-center gap-1" id="btnCancelar">
+                  <img src="../assets/cancel.png" width="20px" height="20px"><p class="mt-0 mb-0">Cancelar</p>
+                </button>
+              </div>  
+            </form>
+          </section>
+          <section class="entidad-header mt-3 d-flex justify-content-center mb-0 pb-0">
+            <div class="container-fluid d-flex justify-content-center">
+              <h3 id="titulo-entidad">Listado de Mascotas</h3>
+            </div>
+          </section>
+          <section class="entidad-container d-flex justify-content-center pt-0 mt-0" id="entidad-container">
+              <div id="lista-entidades"></div>
+          </section>
+          <section class="entidad-informes mt-3 d-flex flex-column align-items-center justify-content-center pt-3" id="contenedor-informes">
+            <div class="d-flex justify-content-center">
+              <h3 id="titulo-informes">Sección de informes y filtrado</h3>
+            </div>
+            <div id="contenedor-filtros" class="d-flex justify-content-center gap-4 mt-3 pt-1 pb-1">
+              <div id="select-filtro">
+                <p class="pt-1 pb-0 mb-0">Filtrar por tipo:</p>
+                <select class="form-select align-self-center mb-4" name="selectRaza" id="selectRaza">
+                  <option value="0" selected>--Elegir--</option>
+                  <option value="1">Todos</option>
+                  <option value="2">Gato</option>
+                  <option value="3">Perro</option>
+                </select>
+              </div>
+              <div id="input-promedio">
+                <p class="pt-1 pb-0 mb-0">Promedio de precios:</p>
+                <input class="form-control" type="text" value="0.00" id="txtPromedio" disabled readonly>
+              </div>
+            </div>
+            <section class="entidad-container d-flex justify-content-center pt-2 mt-0" id="entidad-container-filtros">
+              <div id="lista-entidades-filtros"></div>
+            </section>
+          </section>
+        </main>
+        <footer class="footer d-flex justify-content-between">
+            <nav class="navbar navbar-expand-lg bg-transparent">
+                <div class="container-fluid" id="container-nav-footer">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link" href="#">Administración</a>
+                      <a class="nav-link" href="#">Anuncios</a>
+                      <a class="nav-link" href="#">Nosotros</a>
+                      <a class="nav-link" href="#">Contacto</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            <p class="align-self-end px-3 text-white-50">Todos los derechos reservados 2022 &copy; Nicolás Díaz</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../js/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "mascotas": [
+    {
+      "id": 1,
+      "titulo": "mascota 1.2",
+      "descripcion": "La mejor mascota 1",
+      "precio": "$521",
+      "tipo": "perro",
+      "raza": "Chihuahua",
+      "fecha_de_nacimiento": "03/05/2021",
+      "vacuna": "No"
+    },
+    {
+      "id": 2,
+      "titulo": "mascota 2.5",
+      "descripcion": "La mejor mascota 2",
+      "precio": "$50000",
+      "tipo": "perro",
+      "raza": "Doberman",
+      "fecha_de_nacimiento": "02/07/2019",
+      "vacuna": "Si"
+    },
+    {
+      "id": 3,
+      "titulo": "mascota 3",
+      "descripcion": "La mejor mascota 3",
+      "precio": "$50",
+      "tipo": "gato",
+      "raza": "Bombay",
+      "fecha_de_nacimiento": "12/11/2021",
+      "vacuna": "Si"
+    },
+    {
+      "id": 4,
+      "titulo": "Mascota 4",
+      "descripcion": "Sarasa4",
+      "precio": "$5",
+      "tipo": "perro",
+      "raza": "Salchicha",
+      "fecha_de_nacimiento": "05/01/2018",
+      "vacuna": "Si"
+    },
+    {
+      "id": 5,
+      "titulo": "Mascota 5",
+      "descripcion": "Sarasa",
+      "precio": "$12344",
+      "tipo": "perro",
+      "raza": "Pitbull",
+      "fecha_de_nacimiento": "03/10/2022",
+      "vacuna": "Si"
+    }
+  ]
+}

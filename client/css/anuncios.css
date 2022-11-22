@@ -1,0 +1,126 @@
+/* Header */
+.header-principal{
+    background: rgb(99,99,99);
+    background: linear-gradient(45deg, #51ceca, #8b40bd);
+}
+.nav-link{
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    font-size: 18px;
+}
+.nav-link:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(58, 58, 58, 0.7);
+}
+.nav-link:visited{
+    color:#ca4557;
+}
+.nav-link:visited:hover{
+    color: rgba(58, 58, 58, 0.7);
+}
+@media screen and (max-width:991px) {
+    #container-nav{
+        display: flex;
+        width: 40vw;
+        justify-content: center;
+    }
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1vw;
+    }
+}
+/* Main */
+main{
+    background-image: url("../assets/index.jpg");
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto;
+}
+/* Tarjetas */
+.tarjetas-titulo{
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-top: 2vh;
+    width: 50%;
+    margin-left: 25vw;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+}
+.tarjetas-titulo > h2{
+    margin: 5px;
+    height: 50px;
+    padding-top: 2vh;
+}
+#contenedor-tarjetas{
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1vw;
+    height: auto;
+}
+.card{
+    background-color: white;
+    color:black;
+    width: 36rem;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding-bottom: 2vh;
+}
+.card p,.card h3{
+    text-align: center;
+}
+.card-title{
+    font-size: 24px;
+}
+.description{
+    font-size: 15px;
+}
+.valor{
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(71, 167, 26);
+}
+.elementos{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    padding-bottom: 3vh;
+}
+.elementos > div{
+    display: flex;
+}
+.elementos p{
+    padding-left: 1.25vw;
+}
+#contenedor-btn{
+    display: flex;
+    justify-content: center;
+}
+.btn-mascota{
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    text-decoration: none;
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.25s;
+}
+.btn-mascota:hover{
+    cursor: pointer;
+    background-color: rgb(219, 143, 1);
+}
+/* Footer */
+.footer{
+    background: rgb(99,99,99);
+    background: linear-gradient(45deg, #51ceca, #8b40bd);
+}
