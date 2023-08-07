@@ -14,7 +14,7 @@ Aquí alojo el segundo parcial realizado durante mi cursada en la materia `Labor
 * **Nota obtenida**: 10
 
 ```js
-// filter, map or reduce ??
+// filter, map and reduce examples
 
 let array_users = [
     {
@@ -36,7 +36,7 @@ let array_users = [
         salary: 21000
     }];
 
-// use 'filter' to obtain only the information you need in the array
+// use 'filter' to obtain items with the information you need in the array
 let users_women = array_users.filter(user => user.gender === "F");
 /*
     => [
@@ -77,7 +77,7 @@ let users_salary_double = array_users.map(user => user.salary * 2);
     => [50000, 66000, 42000]
 */
 
-// use 'reduce' like acumulator or if you want to have certain information like user with highest salary
+// use 'reduce' as acumulator or if you want to have certain information like user with highest salary
 let users_salary_total = array_users.reduce((prev, actual) => prev + actual.salary, 0);
 /*
     => 79000
